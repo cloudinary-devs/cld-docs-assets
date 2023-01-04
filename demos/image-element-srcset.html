@@ -1,0 +1,25 @@
+<html>
+
+<body>
+
+<h1>Responsive images using srcset, sizes and dynamic transformations</h1>
+<p>Resize your browser to see the image of the house change size.</p> 
+<ul><li>At viewport widths of 50em and higher, the image is 50em wide. </li>
+<li>At viewport widths lower than 50em, the image is resized to 100% of the viewport width.</li></ul> 
+
+<div style="width: 100%; text-align:center;">
+<img
+  sizes="(min-width: 50em) 50em, 100vw"
+  srcset="https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/c_scale,w_256/docs/house.jpg 256w,
+          https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/c_scale,w_512/docs/house.jpg 512w,
+          https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/c_scale,w_768/docs/house.jpg 768w,
+          https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/c_scale,w_1024/docs/house.jpg 1024w,
+          https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/c_scale,w_1280/docs/house.jpg 1280w"
+  src="https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/c_scale,w_512/docs/house.jpg"
+  alt="Responsive house" />
+
+</div>
+
+</body>
+
+</html>
