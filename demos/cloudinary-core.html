@@ -1,0 +1,168 @@
+<html>
+
+<body>
+
+<script
+    src="https://unpkg.com/cloudinary-core@latest/cloudinary-core-shrinkwrap.js"
+    type="text/javascript">
+</script>
+
+<style>
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 28px;
+  line-height: 1.5556;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out; }
+  .thumbnail > img, .thumbnail a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; }
+  .thumbnail .caption {
+    padding: 9px;
+    color: #2e2e2e; }
+
+a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
+  border-color: #0971ce; }
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px; }
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  .row:after {
+    clear: both; }
+
+.col-xs-3, .col-xs-6, .col-xs-12 {
+  float: left; }
+
+.col-xs-3 {
+  width: 25%; }
+
+.col-xs-6 {
+  width: 50%; }
+
+.col-xs-12 {
+  width: 100%; }
+
+
+@media (min-width: 768px) {
+  .col-sm-4, .col-sm-6 {
+    float: left; }
+
+  .col-sm-4 {
+    width: 33.3333333333%; }
+
+  .col-sm-6 {
+    width: 50%; }
+ }
+
+@media (min-width: 1200px) {
+  .col-lg-3, .col-lg-4 {
+    float: left; }
+
+  .col-lg-3 {
+    width: 25%; }
+
+  .col-lg-4 {
+    width: 33.3333333333%; }
+
+  }
+
+div.restrict {
+  max-width: 900px;
+  margin: auto;
+}
+
+</style>
+
+<h1>Responsive images using the cloudinary-core JS library</h1>
+
+<p>Resize your browser window to see how the layout and images (including the text overlays) dynamically respond to the changes.</p>
+
+<div class="restrict">
+    <h2>4 columns</h2>
+    <div class="row">
+      <div class="col-xs-3">
+          <a href="https://res.cloudinary.com/demo/image/upload/koala.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/koala.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+       <div class="col-xs-3">
+          <a href="https://res.cloudinary.com/demo/image/upload/koala.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/koala.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+      <div class="col-xs-3">
+          <a href="https://res.cloudinary.com/demo/image/upload/koala.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/koala.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+      <div class="col-xs-3">
+          <a href="https://res.cloudinary.com/demo/image/upload/koala.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/koala.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+    </div>
+    <h2>4 columns changing to 3 columns, then to 2 columns as the page width narrows</h2>
+    <div class="row">
+      <div class="col-lg-3 col-sm-4 col-xs-6">
+          <a href="https://res.cloudinary.com/demo/image/upload/lions.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/lions.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+       <div class="col-lg-3 col-sm-4 col-xs-6">
+          <a href="https://res.cloudinary.com/demo/image/upload/lions.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/lions.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+      <div class="col-lg-3 col-sm-4 col-xs-6">
+          <a href="https://res.cloudinary.com/demo/image/upload/lions.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/lions.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+      <div class="col-lg-3 col-sm-4 col-xs-6">
+          <a href="https://res.cloudinary.com/demo/image/upload/lions.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/lions.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+    </div>
+    <h2>3 columns changing to 2 columns, then to 1 column as the page width narrows</h2>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 col-xs-12">
+          <a href="https://res.cloudinary.com/demo/image/upload/pandas.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/pandas.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+       <div class="col-lg-4 col-sm-6 col-xs-12">
+          <a href="https://res.cloudinary.com/demo/image/upload/pandas.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/pandas.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-xs-12">
+          <a href="https://res.cloudinary.com/demo/image/upload/pandas.jpg" class="thumbnail"  target="_blank">
+               <img data-src="https://res.cloudinary.com/demo/image/upload/w_auto,dpr_auto,c_limit/g_north_east,y_5,x_5,co_white,l_text:Arial_18_bold:dpr_auto%0Aw_auto/pandas.jpg" class="img-responsive cld-responsive">
+          </a>
+      </div>
+    </div>
+  
+  </div>
+
+<script type="text/javascript">
+    var cl = cloudinary.Cloudinary.new({cloud_name: "demo"}); 
+ 
+    cl.responsive();
+</script>
+
+</body>
+
+</html>
