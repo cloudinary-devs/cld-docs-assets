@@ -18,7 +18,7 @@
         var myWidget = cloudinary.createUploadWidget({
             cloudName: 'cloudinary',
             uploadPreset: 'docs-videos-unsigned',
-            sources: ["local", "url"],
+            sources: ["local", "url", "dropbox"],
             clientAllowedFormats: ["video"]
         }, (error, result) => {
             if (!error && result && result.event === "success") {
