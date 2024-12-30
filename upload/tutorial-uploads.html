@@ -18,7 +18,7 @@
         var myWidget = cloudinary.createUploadWidget({
             cloudName: 'cloudinary',
             uploadPreset: 'auto-tutorial',
-            sources: ["local", "url", "dropbox", "googleDriveClientId"],
+            sources: ["local", "url", "dropbox", "google_drive"],
             clientAllowedFormats: ["video"]
         }, (error, result) => {
             if (!error && result && result.event === "success") {
