@@ -13,6 +13,8 @@
         <button id="upload_widget" class="cloudinary-button">Upload Video</button>
         <p id="thanks"></p>
         <p id="publicId"></p>
+        <p><a id="transcript" href=""></a></p>
+        <p><a id="chapters" href=""></a></p>
     </div>
 
     <script type="text/javascript">
@@ -34,6 +36,16 @@
                 // Extract and display the public ID
                 document.getElementById("thanks").innerText = "Thank you!";
                 document.getElementById("publicId").innerText = `Public ID: ${result.info.public_id}`;
+
+                let transcriptUrl = `https://cloudinary-res.cloudinary.com/raw/upload/${result.info.public_id}.transcript`;
+                let chaptersUrl = `https://cloudinary-res.cloudinary.com/raw/upload/${result.info.public_id}-chapters.vtt`;
+
+                document.getElementById("transcript").href = `${transcriptUrl}?response-content-disposition=attachment`;
+                document.getElementById("transcript").innerText = transcriptUrl;
+
+                document.getElementById("chapters").href = `${chaptersUrl}?response-content-disposition=attachment`;
+                document.getElementById("chapters").innerText = chaptersUrl;
+
             }
         });
 
