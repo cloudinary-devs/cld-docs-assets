@@ -8,12 +8,13 @@
 
 <body>
     <div style="text-align: center;">
-        
         <h1>Tutorial Uploads</h1>
         <p>Upload your video tutorials here. They are uploaded to the 'training' folder of the 'cloudinary' product environment.</p>
         <button id="upload_widget" class="cloudinary-button">Upload Video</button>
         <p id="thanks"></p>
+        <p id="publicId"></p>
     </div>
+
     <script type="text/javascript">
         var myWidget = cloudinary.createUploadWidget({
             cloudName: 'cloudinary',
@@ -21,11 +22,21 @@
             sources: ["local", "url", "dropbox", "google_drive"],
             clientAllowedFormats: ["video"]
         }, (error, result) => {
-            if (!error && result && result.event === "success") {
-                document.getElementById("thanks").innerText = "Thank you!";
+            if (error) {
+                console.error("Upload Error:", error);
+                return;
             }
-        }
-        )
+
+            // Ensure we only handle the "success" event
+            if (result.event === "success") {
+                console.log("Upload Successful:", result.info); // Log full details
+                
+                // Extract and display the public ID
+                document.getElementById("thanks").innerText = "Thank you!";
+                document.getElementById("publicId").innerText = `Public ID: ${result.info.public_id}`;
+            }
+        });
+
         document.getElementById("upload_widget").addEventListener("click", function () {
             myWidget.open();
         }, false);
