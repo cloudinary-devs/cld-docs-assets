@@ -40,10 +40,13 @@
                 let transcriptUrl = `https://cloudinary-res.cloudinary.com/raw/upload/${result.info.public_id}.transcript`;
                 let chaptersUrl = `https://cloudinary-res.cloudinary.com/raw/upload/${result.info.public_id}-chapters.vtt`;
 
-                document.getElementById("transcript").href = `${transcriptUrl}?response-content-disposition=attachment`;
+                let transcriptUrlAtt = `https://cloudinary-res.cloudinary.com/raw/upload/fl_attachment/${result.info.public_id}.transcript`;
+                let chaptersUrlAtt = `https://cloudinary-res.cloudinary.com/raw/upload/fl_attachment/${result.info.public_id}-chapters.vtt`;
+
+                document.getElementById("transcript").href = transcriptUrlAtt;
                 document.getElementById("transcript").innerText = transcriptUrl;
 
-                document.getElementById("chapters").href = `${chaptersUrl}?response-content-disposition=attachment`;
+                document.getElementById("chapters").href = chaptersUrlAtt;
                 document.getElementById("chapters").innerText = chaptersUrl;
 
             }
