@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      max-width: 100vw;
+      box-sizing: border-box;
+    }
+    
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    
+    p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      margin-bottom: 2rem;
+      word-wrap: break-word;
+    }
+    
+    video {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Auto-cropped videos for different orientations</h1>
+<p>Resize your browser and refresh to see the different videos displayed based on the width of the viewport.</p>
+
+<video controls>
+    <!-- Landscape orientation -->
+    <source src="https://res.cloudinary.com/demo/video/upload/ar_16:9,c_fill,g_auto,w_800/dog_orig_qflwce.mp4" 
+            media="(orientation: landscape) and (min-width: 800px)"/>
+  
+    <!-- Portrait orientation -->
+    <source src="https://res.cloudinary.com/demo/video/upload/ar_9:16,c_fill,g_auto,w_300/dog_orig_qflwce.mp4" 
+            media="(orientation: portrait) and (min-width: 300px)"/>
+  
+    <!-- Fallback -->
+    <source src="https://res.cloudinary.com/demo/video/upload/c_scale,w_600/dog_orig_qflwce.mp4"/>
+  </video>
+
+</body>
+
+</html>
