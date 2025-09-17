@@ -1,0 +1,26 @@
+<html>
+
+<body>
+
+<h1>Responsive images using the picture element for different orientations</h1>
+<p>Resize your browser to see the different images displayed based on the width of the viewport.</p>
+
+<picture>
+    <source 
+      media="(min-width: 1600px)"
+      srcset="https://res.cloudinary.com/demo/image/upload/ar_16:9,c_auto,g_auto/f_auto/q_auto/c_scale,w_800/docs/hiking-man.jpg 800w, https://res.cloudinary.com/demo/image/upload/ar_16:9,c_auto,g_auto/f_auto/q_auto/c_scale,w_1600/docs/hiking-man.jpg 1600w"
+      sizes="100vw" />  
+    <source 
+      media="(min-width: 1200px)"
+      srcset="https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/c_scale,w_600/docs/hiking-man.jpg 600w, https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/c_scale,w_1200/docs/hiking-man.jpg 1200w"
+      sizes="100vw" />
+    <img
+      srcset="https://res.cloudinary.com/demo/image/upload/ar_9:16,c_auto,g_auto/f_auto/q_auto/c_scale,w_400/docs/hiking-man.jpg 400w,https://res.cloudinary.com/demo/image/upload/ar_9:16,c_auto,g_auto/f_auto/q_auto/c_scale,w_800/docs/hiking-man.jpg 800w"
+      src="https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/c_scale,w_400/docs/hiking-man.jpg"
+      alt="Man hiking"
+      sizes="100vw" /> 
+  </picture>
+
+</body>
+
+</html>
