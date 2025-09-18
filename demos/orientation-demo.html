@@ -6,17 +6,17 @@
 <p>Resize your browser to see the different images displayed based on the width of the viewport.</p>
 
 <picture>
-    <!-- Desktop: 16:9 landscape for large screens -->
+    <!-- Large screens: 16:9 landscape for viewports 1600px+ wide -->
     <source 
       media="(min-width: 1600px)"
       srcset="https://res.cloudinary.com/demo/image/upload/ar_16:9,c_auto,g_auto/f_auto/q_auto/c_scale,w_1600/docs/hiking-man.jpg 1600w, https://res.cloudinary.com/demo/image/upload/ar_16:9,c_auto,g_auto/f_auto/q_auto/c_scale,w_1920/docs/hiking-man.jpg 1920w"
       sizes="100vw" />  
-    <!-- Landscape orientation: 16:9 for any device in landscape -->
+    <!-- Medium landscape: 16:9 for landscape orientation with min-width 600px -->
     <source 
       media="(orientation: landscape) and (min-width: 600px)"
       srcset="https://res.cloudinary.com/demo/image/upload/ar_16:9,c_auto,g_auto/f_auto/q_auto/c_scale,w_600/docs/hiking-man.jpg 600w, https://res.cloudinary.com/demo/image/upload/ar_16:9,c_auto,g_auto/f_auto/q_auto/c_scale,w_1200/docs/hiking-man.jpg 1200w"
       sizes="100vw" />
-    <!-- Mobile: 9:16 portrait for small screens -->
+    <!-- Fallback: 9:16 portrait for all other cases (primarily mobile portrait) -->
     <img
       srcset="https://res.cloudinary.com/demo/image/upload/ar_9:16,c_auto,g_auto/f_auto/q_auto/c_scale,w_375/docs/hiking-man.jpg 375w, https://res.cloudinary.com/demo/image/upload/ar_9:16,c_auto,g_auto/f_auto/q_auto/c_scale,w_750/docs/hiking-man.jpg 750w"
       src="https://res.cloudinary.com/demo/image/upload/ar_9:16,c_auto,g_auto/f_auto/q_auto/c_scale,w_375/docs/hiking-man.jpg"
