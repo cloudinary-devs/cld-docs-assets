@@ -12,9 +12,6 @@
         <p>Upload your video tutorials here. They are uploaded to the 'training' folder of the 'cloudinary' product environment.</p>
         <button id="upload_widget" class="cloudinary-button">Upload Video</button>
         <p id="thanks"></p>
-        <p id="publicId"></p>
-        <p><a id="transcript" href=""></a></p>
-        <p><a id="chapters" href=""></a></p>
     </div>
 
     <script type="text/javascript">
@@ -30,25 +27,9 @@
             }
 
             // Ensure we only handle the "success" event
-            if (result.event === "success") {
-                console.log("Upload Successful:", result.info); // Log full details
-                
+            if (result.event === "success") {                
                 // Extract and display the public ID
                 document.getElementById("thanks").innerText = "Thank you!";
-                document.getElementById("publicId").innerText = `Public ID: ${result.info.public_id}`;
-
-                let transcriptUrl = `https://cloudinary-res.cloudinary.com/raw/upload/${result.info.public_id}.transcript`;
-                let chaptersUrl = `https://cloudinary-res.cloudinary.com/raw/upload/${result.info.public_id}-chapters.vtt`;
-
-                let transcriptUrlAtt = `https://cloudinary-res.cloudinary.com/raw/upload/fl_attachment/${result.info.public_id}.transcript`;
-                let chaptersUrlAtt = `https://cloudinary-res.cloudinary.com/raw/upload/fl_attachment/${result.info.public_id}-chapters.vtt`;
-
-                document.getElementById("transcript").href = transcriptUrlAtt;
-                document.getElementById("transcript").innerText = transcriptUrl;
-
-                document.getElementById("chapters").href = chaptersUrlAtt;
-                document.getElementById("chapters").innerText = chaptersUrl;
-
             }
         });
 
